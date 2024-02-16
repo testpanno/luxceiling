@@ -1,0 +1,16 @@
+{
+  "author": "",
+  "dependencies": {
+    "gh-pages": "^6.1.1"
+  },
+  "description": "",
+  "homepage": "https://testpanno.github.io/luxceiling",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "luxceiling-studio",
+  "scripts": {
+    "deploy": "gh-pages -d -dist"
+  },
+  "version": "1.0.0"
+}

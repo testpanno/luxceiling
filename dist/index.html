@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>LuxCeiling Studio</title>
+  </head>
+  <body class="bg-dark">
+    <nav class="sticky-navbar d-flex justify-content-between">
+      <a href="#" class="logo text-white fw-bold">
+        LuxCeiling <span class="text-primary">Studio</span>
+      </a>
+      <ul class="menu">
+        <li class="px-4 d-flex align-items-center">
+          <a href="#about-us">О нас</a>
+        </li>
+        <li class="px-4 d-flex align-items-center">
+          <a href="#catalog">Каталог</a>
+        </li>
+        <li class="px-4 d-flex align-items-center">
+          <a href="#projects">Примеры работ</a>
+        </li>
+        <li class="px-4 d-flex align-items-center">
+          <a href="#footer">Контакты</a>
+        </li>
+      </ul>
+      <div class="hamburger" onclick="showSidebar()">
+        <img src="/assets/img/menu.svg" alt="" style="width: 32px" />
+      </div>
+    </nav>
+    <header class="header-wrapper" id="header">
+      <div
+        class="main-section py-3 px-5 d-flex flex-column justify-content-around"
+      >
+        <div class="circle"></div>
+        <nav class="d-flex justify-content-between">
+          <a href="#" class="logo text-white fw-bold">
+            LuxCeiling <span class="text-primary">Studio</span>
+          </a>
+          <ul class="menu">
+            <li class="px-4 d-flex align-items-center">
+              <a href="#about-us">О нас</a>
+            </li>
+            <li class="px-4 d-flex align-items-center">
+              <a href="#catalog">Каталог</a>
+            </li>
+            <li class="px-4 d-flex align-items-center">
+              <a href="#projects">Примеры работ</a>
+            </li>
+            <li class="px-4 d-flex align-items-center">
+              <a href="#footer">Контакты</a>
+            </li>
+          </ul>
+          <div class="hamburger" onclick="showSidebar()">
+            <img src="/assets/img/menu.svg" alt="" style="width: 32px" />
+          </div>
+          <ul class="mobile-menu d-flex">
+            <li class="d-flex justify-content-end" style="margin-top: 0px">
+              <img
+                src="/assets/img/times.svg"
+                alt=""
+                style="width: 32px"
+                onclick="hideSidebar()"
+              />
+            </li>
+            <li><a href="#about-us" class="link-dark">О нас</a></li>
+            <li><a href="#catalog" class="link-dark">Каталог</a></li>
+            <li><a href="#projects" class="link-dark">Примеры работ</a></li>
+            <li><a href="#footer" class="link-dark">Контакты</a></li>
+            <li class="mt-5">
+              <div class="icons-mobile d-flex">
+                <a href="#" class="link-dark"
+                  ><i class="fa-brands fa-vk"></i
+                ></a>
+                <a href="#" class="link-dark"
+                  ><i class="fa-brands fa-instagram ms-4"></i
+                ></a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="text-white">
+          <span class="text-primary"> Мы делаем </span> <br />
+          <span class="header-margin">натяжные потолки</span> <br />
+          <span class="header-margin"
+            ><span class="text-primary header-margin">любой</span>
+            сложности</span
+          >
+        </h1>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="header-cta">
+            <a
+              href="#calculator-section"
+              class="link-light"
+              style="text-wrap: nowrap"
+              ><img
+                src="/assets/img/arrow-left.svg"
+                alt=""
+                class="cta-arrow me-4"
+              />Рассчитать стоимость</a
+            >
+          </div>
+          <div class="icons">
+            <a href="#" class="link-light"><i class="fa-brands fa-vk"></i></a>
+            <a href="#" class="link-light"
+              ><i class="fa-brands fa-instagram ms-4"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="right-slider">
+        <img src="/assets/img/lightlines.jpg" class="slide" />
+        <img src="/assets/img/lightlines.jpg" class="slide" />
+        <img src="/assets/img/lightlines.jpg" class="slide" />
+        <img src="/assets/img/lightlines.jpg" class="slide" />
+        <div class="navigation d-flex">
+          <button onclick="if(counter > 0) goPrev()" class="me-3 prev-btn">
+            <img src="/assets/img/white-arrow-right.png" alt="" />
+          </button>
+          <div class="counter text-white fz-18"></div>
+          <button onclick="if(counter < 3) goNext()" class="ms-3 next-btn">
+            <img src="/assets/img/white-arrow-left.png" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <div class="left-image"></div>
+      <div class="philosophy-text">
+        <h3>НАША ФИЛОСОФИЯ</h3>
+        <p class="lh-lg">
+          Мы стремимся сделать ваше пространство элегантным и уникальным,
+          обеспечивая высочайший уровень сервиса и качества. Наши потолки - это
+          не просто стильный дизайн, это искусство, которое придает вашему
+          интерьеру неповторимый характер.
+        </p>
+      </div>
+      <div class="chair-image"></div>
+      <div class="catalog-count">
+        <p class="fz-48">9</p>
+        <p class="fz-18">Вариантов <br />потолков</p>
+        <a href="#catalog" class="fw-medium link-dark"
+          >Каталог
+          <img
+            src="/assets/img/arrow_black.svg"
+            alt=""
+            class="header-count-arrow"
+        /></a>
+      </div>
+      <div class="orders-count">
+        <p class="fz-48">167</p>
+        <p class="fz-18">Завершенных <br />проектов</p>
+        <a href="#projects" class="fw-medium link-dark"
+          >Проекты
+          <img
+            src="/assets/img/arrow_black.svg"
+            alt=""
+            class="header-count-arrow"
+        /></a>
+      </div>
+    </header>
+
+    <section class="calculator py-5" id="calculator-section">
+      <div class="container-fluid px-4 px-md-5 pt-5" style="max-width: 1920px">
+        <h2 class="fz-48">Рассчитать стоимость натяжного потолка</h2>
+
+        <div class="calculator-widget mt-5">
+          <div class="calculator-widget-header">
+            <span class="text-white">Добавьте помещение для расчета</span>
+            <div class="d-flex">
+              <ul
+                class="mt-3 p-0 calculator-widget-rooms-list text-white d-flex flex-wrap"
+              ></ul>
+              <ul class="mt-3 p-0 text-white d-flex flex-wrap">
+                <li
+                  class="d-flex pt-3 mb-sm-0 align-items-center me-3 add-room-btn"
+                >
+                  Добавить
+                </li>
+                <li
+                  class="d-flex pt-3 mb-sm-0 align-items-center me-3 remove-room-btn"
+                >
+                  Сбросить
+                </li>
+              </ul>
+            </div>
+
+            <hr class="text-white mt-4" />
+            <div class="container-fluid text-white px-0">
+              <div class="row">
+                <div class="col-lg-6 d-flex flex-column">
+                  <div
+                    class="select-group mt-2 selected"
+                    id="ceiling-type-choose-tab"
+                  >
+                    <span>1. Выберите тип потолка</span>
+                    <div class="row mt-3">
+                      <div class="col-lg-6 mb-3 mb-lg-0">
+                        <button
+                          class="btn btn-outline-light w-100 ceiling-type-btn"
+                          id="PVC"
+                        >
+                          ПВХ Потолки
+                        </button>
+                      </div>
+                      <div class="col-lg-6 mb-3 mb-lg-0">
+                        <button
+                          class="btn btn-outline-light w-100 ceiling-type-btn"
+                          id="fabric"
+                        >
+                          Тканевый
+                        </button>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                  <div class="select-group mt-2" id="manufacturer-choose-tab">
+                    <span>2. Выберите производителя</span>
+                    <div class="row mt-3">
+                      <div class="col-lg-4 mb-3 mb-lg-0">
+                        <button
+                          class="btn btn-outline-light w-100 manufacturer-btn"
+                          id="MSD-Premium"
+                        >
+                          MSD Premium
+                        </button>
+                      </div>
+                      <div class="col-lg-4 mb-3 mb-lg-0">
+                        <button
+                          class="btn btn-outline-light w-100 manufacturer-btn"
+                          id="MSD-Evolution"
+                        >
+                          MSD Evolution
+                        </button>
+                      </div>
+                      <div class="col-lg-4 mb-3 mb-lg-0">
+                        <button
+                          class="btn btn-outline-light w-100 manufacturer-btn"
+                          id="Bauf"
+                        >
+                          Bauf
+                        </button>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                  <div
+                    class="select-group mt-2"
+                    id="construction-type-choose-tab"
+                  >
+                    <span>3. Тип конструкции</span>
+                    <div class="row mt-3">
+                      <div class="col-lg-4 mb-3 mb-lg-0">
+                        <button
+                          class="btn btn-outline-light w-100 construction-type-btn"
+                          id="classic"
+                        >
+                          Классика
+                        </button>
+                      </div>
+                      <div class="col-lg-4 mb-3 mb-lg-0">
+                        <button
+                          class="btn btn-outline-light w-100 construction-type-btn"
+                          id="seamless"
+                        >
+                          Бесщелевые
+                        </button>
+                      </div>
+                      <div class="col-lg-4 mb-3 mb-lg-0">
+                        <button
+                          class="btn btn-outline-light w-100 construction-type-btn"
+                          id="shadow"
+                        >
+                          Теневые
+                        </button>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                  <div class="select-group mt-2">
+                    <span>4. Параметры помещения</span>
+                    <div class="row mt-3">
+                      <div class="col-lg-4 mt-3 mt-lg-0">
+                        <div class="d-flex flex-column">
+                          <label for="Input1" class="form-label"
+                            >Площадь, м<sup>2</sup></label
+                          >
+                          <input
+                            type="number"
+                            class="dark-input"
+                            id="areaInput"
+                            placeholder="Введите число"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-3 mt-lg-0">
+                        <div class="d-flex flex-column">
+                          <label for="Input1" class="form-label"
+                            >Кол-во углов</label
+                          >
+                          <input
+                            type="number"
+                            class="dark-input"
+                            id="cornersInput"
+                            placeholder="Введите число"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-3 mt-lg-0">
+                        <div class="d-flex flex-column">
+                          <label
+                            for="Input1"
+                            class="form-label d-flex justify-content-between"
+                            >Вентиляция
+                          </label>
+                          <input
+                            type="number"
+                            class="dark-input"
+                            id="ventilationInput"
+                            placeholder="Введите число"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                  <div class="select-group mt-2">
+                    <span>5. Дополнительные опции</span>
+                    <div class="row mt-3">
+                      <div class="col-lg-4 mt-3 mt-lg-0">
+                        <div class="d-flex flex-column">
+                          <label for="Input1" class="form-label"
+                            >Светильники</label
+                          >
+                          <input
+                            type="number"
+                            class="dark-input"
+                            id="luminariesInput"
+                            placeholder="Введите число"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-3 mt-lg-0">
+                        <div class="d-flex flex-column">
+                          <label for="Input1" class="form-label">Люстры</label>
+                          <input
+                            type="number"
+                            class="dark-input"
+                            id="chandeliersInput"
+                            placeholder="Введите число"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-3 mt-lg-0">
+                        <div class="d-flex flex-column">
+                          <label for="Input1" class="form-label">Трубы </label>
+                          <input
+                            type="number"
+                            class="dark-input"
+                            id="pipesInput"
+                            placeholder="Введите число"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mt-4 ps-3 ps-md-5 pt-3">
+                  <h4 class="fw-medium">
+                    Предварительная стоимость <br />по вашим параметрам
+                  </h4>
+
+                  <ul class="rooms-sum-list d-flex flex-column p-0 mt-5"></ul>
+
+                  <hr class="mb-5" />
+
+                  <h3 class="fz-32 mb-4">
+                    Общая стоимость<br />
+                    за все помещения
+                  </h3>
+                  <span class="final-sum fz-48 fw-bold me-3">~ 0</span>
+                  <span class="fz-24">руб.</span>
+                  <hr class="my-5" />
+
+                  <div
+                    class="row d-flex justify-content-between align-items-center"
+                  >
+                    <h4 class="fw-medium col">
+                      Проконсультируетесь <br />по расчёту и скидкам
+                    </h4>
+                    <a
+                      class="main-cta col mt-3 mt-lg-0 link-light d-flex justify-content-lg-end align-items-center"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      <span>ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</span>
+                      <button>
+                        <img src="/assets/img/arrow-left.svg" alt="" />
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-us py-5" id="about-us">
+      <div
+        class="container-fluid px-4 px-md-5 pt-5 text-white"
+        style="max-width: 1920px"
+      >
+        <div class="row">
+          <div class="col-lg-5">
+            <h3 class="projects-title">О НАС</h3>
+          </div>
+          <div class="col-lg-7 mt-5 mt-lg-0 mb-lg-5 pb-lg-5">
+            <div class="row p-0">
+              <p class="col-lg-6 lh-lg mb-5 mb-lg-0">
+                Наша миссия - предоставить клиентам высококачественные
+                потолочные решения, соответствующие самым высоким стандартам
+                дизайна и инженерии. Мы работаем с индивидуальными клиентами,
+                дизайнерами и строительными компаниями, чтобы обеспечить
+                решения, точно отвечающие их потребностям и ожиданиям.
+              </p>
+              <p class="col-lg-6 lh-lg">
+                В LuxCeiling мы гордимся нашим профессионализмом, инновационным
+                подходом и вниманием к деталям. Наши опытные специалисты с
+                радостью помогут вам создать уникальный и впечатляющий интерьер,
+                который будет радовать вас на протяжении многих лет.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5 pt-lg-5 d-flex justify-content-between">
+          <div class="col-lg-2 mt-5 mt-lg-0">
+            <span class="fz-64 fw-medium">9</span>
+            <hr class="mb-4" />
+            <p>Вариантов потолков</p>
+          </div>
+          <div class="col-lg-2 mt-5 mt-lg-0">
+            <span class="fz-64 fw-medium">12+</span>
+            <hr class="mb-4" />
+            <p>Сотрудников</p>
+          </div>
+          <div class="col-lg-2 mt-5 mt-lg-0">
+            <span class="fz-64 fw-medium">100%</span>
+            <hr class="mb-4" />
+            <p>Индивидуальный подход</p>
+          </div>
+          <div class="col-lg-2 mt-5 mt-lg-0">
+            <span class="fz-64 fw-medium">9</span>
+            <hr class="mb-4" />
+            <p>Вариантов потолков</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container-fluid px-0 text-white">
+        <div style="position: relative; padding-top: 56.25%; width: 100%">
+          <iframe
+            src="https://kinescope.io/embed/wYAozv9t93KJ7CCK7YzPVm"
+            allow="autoplay; fullscreen; picture-in-picture; encrypted-media;"
+            frameborder="0"
+            allowfullscreen
+            style="
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+            "
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <section class="catalog py-5" id="catalog">
+      <div
+        class="container-fluid px-2 px-md-5 pt-5 text-white"
+        style="max-width: 1920px"
+      >
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="projects-title">КАТАЛОГ<br />ПОТОЛКОВ</h3>
+          </div>
+          <p class="col-lg-6 mt-5 mt-lg-0 mb-lg-5 pb-lg-5 lh-lg">
+            Наш каталог предлагает разнообразные варианты для различных типов
+            помещений - от современных квартир и загородных домов до
+            коммерческих объектов и общественных зданий. Вы можете выбрать из
+            множества текстур - от глянцевых и матовых до шелковистых и
+            сатиновых, а также из богатого спектра цветов - от классических
+            нейтральных до ярких и выразительных.
+          </p>
+        </div>
+        <div class="row mt-5">
+          <div class="owl-carousel">
+            <div class="catalog-slides">
+              <img src="/assets/img/Rectangle 33.png" alt="" class="w-100" />
+              <h4 class="text-center fz-32">ТРЕКОВЫЕ <br />СИСТЕМЫ</h4>
+            </div>
+            <div class="catalog-slides">
+              <img src="/assets/img/Rectangle 34.png" alt="" class="w-100" />
+              <h4 class="text-center fz-32">ПАРЯЩИЕ <br />ПОТОЛКИ</h4>
+            </div>
+            <div class="catalog-slides">
+              <img src="/assets/img/Rectangle 35.png" alt="" class="w-100" />
+              <h4 class="text-center fz-32">ПОТОЛКИ <br />С 2+ УРОВНЯМИ</h4>
+            </div>
+            <div class="catalog-slides">
+              <img src="/assets/img/Rectangle 36.png" alt="" class="w-100" />
+              <h4 class="text-center fz-32">СВЕТОВЫЕ <br />ЛИНИИ</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects py-5" id="projects">
+      <div
+        class="container-fluid px-4 px-md-5 pt-5 text-white"
+        style="max-width: 1920px"
+      >
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="projects-title">ВЫПОЛНЕННЫЕ<br />ПРОЕКТЫ</h3>
+          </div>
+          <p class="col-lg-6 mt-5 mt-lg-0 mb-lg-5 pb-lg-5 lh-lg">
+            Приглашаем вас ознакомиться с нашими работами и получить вдохновение
+            для вашего следующего проекта. Если у вас есть какие-либо вопросы
+            или вы хотите обсудить возможность сотрудничества, свяжитесь с нами
+            - наши специалисты всегда готовы помочь вам воплотить ваши идеи в
+            реальность.
+          </p>
+        </div>
+        <div class="row my-4 my-lg-5">
+          <div class="col-lg-6 pe-lg-5">
+            <img src="/assets/img/project1.jpg" alt="" class="w-100" />
+          </div>
+          <div class="col-lg-6">
+            <h3 class="text-uppercase mt-4 mt-lg-0">
+              Парящий потолок в современном интерьере
+            </h3>
+            <p class="pt-5 mt-lg-0 mb-lg-5 pb-lg-5 lh-lg">
+              Мы создали эффектный интерьер, где натяжной потолок кажется словно
+              парит в воздухе, придавая помещению ощущение легкости и
+              пространства. Парящий потолок подчеркивает современный стиль
+              интерьера и дополняет его элегантным и утонченным акцентом.
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="row my-4 my-lg-5">
+          <div class="col-lg-6 pe-lg-5">
+            <img src="/assets/img/project2.jpg" alt="" class="w-100" />
+          </div>
+          <div class="col-lg-6">
+            <h3 class="text-uppercase mt-4 mt-lg-0">
+              Парящий потолок в современном интерьере
+            </h3>
+            <p class="pt-5 mt-lg-0 mb-lg-5 pb-lg-5 lh-lg">
+              Мы создали эффектный интерьер, где натяжной потолок кажется словно
+              парит в воздухе, придавая помещению ощущение легкости и
+              пространства. Парящий потолок подчеркивает современный стиль
+              интерьера и дополняет его элегантным и утонченным акцентом.
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="row my-4 my-lg-5">
+          <div class="col-lg-6 pe-lg-5">
+            <img src="/assets/img/project1.jpg" alt="" class="w-100" />
+          </div>
+          <div class="col-lg-6">
+            <h3 class="text-uppercase mt-4 mt-lg-0">
+              Парящий потолок в современном интерьере
+            </h3>
+            <p class="pt-5 mt-lg-0 mb-lg-5 pb-lg-5 lh-lg">
+              Мы создали эффектный интерьер, где натяжной потолок кажется словно
+              парит в воздухе, придавая помещению ощущение легкости и
+              пространства. Парящий потолок подчеркивает современный стиль
+              интерьера и дополняет его элегантным и утонченным акцентом.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid px-4 px-md-5" style="max-width: 1920px">
+      <div class="row d-flex justify-content-between align-items-center">
+        <h4 class="fw-medium col-lg-9 text-white text-uppercase">
+          Готовы преобразить ваш интерьер? <br />Свяжитесь с нами прямо сейчас
+        </h4>
+        <a
+          class="footer-cta col-lg-3 mt-3 mt-lg-0 link-light d-flex justify-content-between justify-content-lg-end align-items-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <span class="text-wrap me-3">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</span>
+          <button>
+            <img src="/assets/img/arrow-left.svg" alt="" />
+          </button>
+        </a>
+      </div>
+      <hr class="text-white mt-5" />
+    </section>
+    <footer class="footer" id="footer">
+      <div class="container-fluid px-4 px-md-5 py-5" style="max-width: 1920px">
+        <div class="row">
+          <div class="col-lg-3">
+            <h5 class="text-white fw-bold mb-3">
+              <a href="#" class="link-light">LuxCeiling <span class="text-primary">Studio</span></a>
+            </h5>
+            <p class="text-secondary">Студия натяжных потолков</p>
+          </div>
+          <div class="col-lg-3 mt-5 mt-lg-0">
+            <h4 class="footer-title text-white">Меню</h4>
+            <ul class="p-0 mt-4 mt-lg-5">
+              <li class="mb-3"><a href="#about-us" class="link-light">О нас</a></li>
+              <li class="mb-3"><a href="#catalog" class="link-light">Каталог</a></li>
+              <li class="mb-3">
+                <a href="#projects" class="link-light">Примеры работ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mt-5 mt-lg-0">
+            <h4 class="footer-title text-white">Контакты</h4>
+            <ul class="p-0 mt-5">
+              <li class="mb-4">
+                <a href="#" class="link-light"
+                  ><img src="/assets/img/phone.svg" alt="" /><span class="ms-4"
+                    >+7 (800) 555 35-35</span
+                  ></a
+                >
+              </li>
+              <li class="mb-3">
+                <a href="#" class="link-light"
+                  ><img src="/assets/img/envelope.svg" alt="" /><span
+                    class="ms-4"
+                    >luxceilingstudio@mail.ru</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mt-5 mt-lg-0">
+            <h5 class="footer-title text-white">Социальные сети</h5>
+            <ul class="p-0">
+              <li class="mt-4">
+                <div class="icons-mobile d-flex">
+                  <a href="#" class="link-light"
+                    ><i class="fa-brands fa-vk"></i
+                  ></a>
+                  <a href="#" class="link-light"
+                    ><i class="fa-brands fa-instagram ms-4"></i
+                  ></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-left border-0">
+              <div class="modal-logo">
+                <h4 class="fw-bold text-white">
+                  LuxCeiling <span class="text-primary">Studio</span>
+                </h4>
+              </div>
+              <div class="modal-text">
+                <h2>Детали вашего заказа сохранены</h2>
+                <p>
+                  Заполните небольшую форму <br />и узнайте точную стоимость
+                  работ
+                </p>
+              </div>
+              <div class="modal-contact">
+                <ul>
+                  <h5>Контакты</h5>
+
+                  <li>
+                    <img
+                      src="/assets/img/phone.svg"
+                      alt=""
+                      style="width: 22px"
+                    />
+                    <span class="ms-4">
+                      <a
+                        href="tel:+rtyrtyrtyrt"
+                        style="color: #fff; text-decoration: none"
+                        >+7 (800) 555 35-35</a
+                      >
+                    </span>
+                  </li>
+                  <li>
+                    <img
+                      src="/assets/img/envelope.svg"
+                      alt=""
+                      style="width: 22px"
+                    />
+                    <span class="ms-4">
+                      <a
+                        href="mailto:company@sibkomplekt.ru"
+                        style="color: #fff; text-decoration: none"
+                        >luxceilingstudio@mail.ru</a
+                      >
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-right">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+              <form action="#" class="forms" method="post">
+                <div class="form">
+                  <input
+                    type="text"
+                    name="name"
+                    autocomplete="off"
+                    required=""
+                  />
+                  <label class="label-hoshi" for="name">
+                    <span class="content-hoshi"> Ваше имя </span>
+                  </label>
+                </div>
+                <div class="form">
+                  <input
+                    type="email"
+                    name="email"
+                    autocomplete="off"
+                    required=""
+                  />
+                  <label class="label-hoshi" for="email">
+                    <span class="content-hoshi"> Электронная почта </span>
+                  </label>
+                </div>
+                <div class="form">
+                  <input
+                    type="text"
+                    name="phone"
+                    autocomplete="off"
+                    required=""
+                  />
+                  <label class="label-hoshi" for="phone">
+                    <span class="content-hoshi"> Номер телефона </span>
+                  </label>
+                </div>
+                <button class="cta-button shadow">Отправить заявку</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js"
+      integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/assets/js/headerSlider.js"></script>
+    <script src="/assets/js/navbar.js"></script>
+    <script src="/assets/js/calculator.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 50,
+          autoplay: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            1200: {
+              items: 4,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
