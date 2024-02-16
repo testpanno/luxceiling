@@ -276,7 +276,7 @@ a:hover {
 .left-image {
   grid-area: 2 / 1 / 4 / 2;
   background-color: #fff;
-  background-image: url(/assets/img/side-image.png);
+  background-image: url(/luxceiling/assets/img/side-image.png);
   background-size: cover;
   position: relative;
   z-index: 100;
@@ -312,7 +312,7 @@ a:hover {
 
 .chair-image {
   grid-area: 2 / 3 / 4 / 4;
-  background-image: url(/assets/img/chair.png);
+  background-image: url(/luxceiling/assets/img/chair.png);
   background-size: cover;
 }
 .catalog-count {
